@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Periodic Table</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1>Periodic Table</h1>
+        <p>Explore the Elements of Chemistry</p>
+    </header>
+
+    <main>
+        <div class="search-container">
+            <input
+                type="text"
+                id="search"
+                placeholder="Search element name or symbol..."
+                autocomplete="off"
+            >
+        </div>
+
+        <div class="legend" id="legend"></div>
+
+        <section class="table-wrapper">
+            <div id="periodic-table" class="periodic-table"></div>
+        </section>
+    </main>
+
+    <!-- Element Details Popup -->
+    <div class="modal-overlay" id="modal" aria-hidden="true">
+        <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="element-name">
+            <button class="close-btn" id="close-modal" aria-label="Close details">
+                &times;
+            </button>
+
+            <div class="modal-category" id="modal-category">Element</div>
+
+            <div class="modal-top">
+                <div class="modal-number" id="modal-number">1</div>
+                <div class="modal-symbol" id="modal-symbol">H</div>
+            </div>
+
+            <h2 id="element-name">Hydrogen</h2>
+            <p class="element-subtitle" id="element-subtitle">Chemical Element</p>
+
+            <div class="details-grid">
+                <div class="detail-card">
+                    <span>Atomic Number</span>
+                    <strong id="atomic-number">1</strong>
+                </div>
+
+                <div class="detail-card">
+                    <span>Atomic Mass</span>
+                    <strong id="atomic-mass">1.008</strong>
+                </div>
+
+                <div class="detail-card">
+                    <span>Group</span>
+                    <strong id="group">1</strong>
+                </div>
+
+                <div class="detail-card">
+                    <span>Period</span>
+                    <strong id="period">1</strong>
+                </div>
+            </div>
+
+            <div class="description-box">
+                <h3>About this Element</h3>
+                <p id="description"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
